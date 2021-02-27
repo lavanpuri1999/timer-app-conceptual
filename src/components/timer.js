@@ -19,7 +19,7 @@ const Timer = () => {
     const myRef = useRef(window.pageYOffset);
 
     useEffect(() => {
-        window.addEventListener('scroll',handleScroll,true);
+        window.addEventListener('scroll',handleScroll,true)
 
         return () => {
             window.removeEventListener('scroll',handleScroll);
@@ -47,14 +47,16 @@ const Timer = () => {
     }, [counter,speed]); 
 
     useEffect(() => {
-        if(scrollpos>myRef.current){
+
+        console.log(`${scrollpos} ${myRef.current} ${window.pageYOffset}`);
+        if(scrollpos>window.pageYOffset || scrollpos>myRef.current){
             incrementSpeed();
         }
-        else{
+        else if(scrollpos<window.pageYOffset || scrollpos<myRef.current){ 
             decrementSpeed();
         }
         myRef.current = scrollpos;
-        //console.log(scrollpos);
+
     },[scrollpos]);
 
     const incrementSpeed = () => {
