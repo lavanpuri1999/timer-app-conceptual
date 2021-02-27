@@ -1,0 +1,130 @@
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input:focus{
+  outline: none;
+}
+
+.App {
+  text-align: center;
+  background-color: #363636;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(#fff,0.96);
+  scroll-behavior: smooth;
+  background-image: url("./hourglass.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+ 
+  .timer-screen{
+    position: fixed;
+    top: 18vh;
+    left: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    
+    .timer-clock{
+      margin: 40px;
+      height: 120px;
+      width: 120px;
+      background-color: #8739F9; 
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .speed-dashboard{
+      background-color: #100f10;
+      border-radius: 20px;
+      width: 80%;
+
+      .btn-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .btn-pane{
+          margin: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .btn-style{
+            width: 40px;
+            height: 40px;
+            background-color: #1b1b1b;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-width: 3px;
+            border-style: solid;
+            color: #C651CD;
+            border-color: #C651CD;
+            border-radius: 10px;
+          }
+        }
+      }
+      
+      .end-input{
+          border: none;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          width: 40px;
+          height: 30px;
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+          background-color: #C651CD;;
+          color: white;
+          border-radius: 5px;
+      }
+    }
+  }
+}
+
+
+
+.btn-pane{
+  margin: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .btn-style{
+    width: 160px;
+    height: 50px;
+    background-color: #1b1b1b;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-style: solid;
+    color: #C651CD;
+    border-color: #C651CD;
+    border-radius: 10px;
+  }
+}
