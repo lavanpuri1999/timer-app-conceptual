@@ -48,7 +48,7 @@ const Timer = () => {
 
     useEffect(() => {
 
-        console.log(`${scrollpos} ${myRef.current} ${window.pageYOffset}`);
+        //console.log(`${scrollpos} ${myRef.current} ${window.pageYOffset}`);
         if(scrollpos>window.pageYOffset || scrollpos>myRef.current){
             incrementSpeed();
         }
